@@ -8,7 +8,7 @@
 import Vapor
 
 public protocol CreateableModel: BasicModel {
-    associatedtype Create: BasicCreateable
+    associatedtype Create: Content
 
     init(with input: Create)
 }

@@ -20,7 +20,7 @@ public protocol GettableModel: BasicModel {
 
 }
 
-extension GettableModel {
+public extension GettableModel {
 
     func get<T>(as outputType: (T.Type) = DefaultOutput.self) -> T
     where Self == T.Model, T: BasicOutput, DefaultOutput == T {
@@ -29,7 +29,7 @@ extension GettableModel {
 
 }
 
-extension GettableModel {
+public extension GettableModel {
 
     var _$id: Column<UUID> {
         self[keyPath: Self.idKey]
